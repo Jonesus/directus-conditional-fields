@@ -19,6 +19,7 @@ export default {
       this.conditions.forEach(con => {
         if (newVal[con.toggle] !== oldVal[con.toggle]) {
           this.log("Condition " + con.toggle + " was triggered!");
+
           con.conditions.forEach(c => {
             if (c.value === newVal[con.toggle]) {
               this.log("found case!");
@@ -41,9 +42,9 @@ export default {
       this.log("show " + el);
       document.querySelector("[field=" + el + "]").parentElement.parentElement.style.display = "block";
     },
-    log(log) {
+    log() {
       if(this.debug) {
-        console.log(log)
+        console.log(...arguments)
       }
     }
   }
