@@ -46,6 +46,7 @@ Configuration used for the example:
 1. Copy `dist/index.js` to `/directus/extensions/interfaces/conditional-fields/` (or whereever your extension folder is)
 1. Add a new json field to your collection and select the `Conditional Fields` interface
 1. Enter your conditions in the json input field
+1. If your `toggle` field doesn't have a default value, all conditional fields show by default, but this can be toggled with the `Hide fields by default` option
 1. Optionally enable debug mode to see why your conditions don't work as expected, it will print stuff to your browser console
 
 

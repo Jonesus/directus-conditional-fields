@@ -14,6 +14,14 @@ export default {
             type: "json"
         },
         {
+            field: "hideByDefault",
+            name: "Hide all fields by default",
+            meta: {
+                note: "If toggle field has no default value set, this extensions hides nothing by default"
+            },
+            type: "boolean"
+        },
+        {
             field: "debug",
             name: "Debug",
             type: "boolean"

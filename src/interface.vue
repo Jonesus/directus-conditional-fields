@@ -5,11 +5,19 @@ export default {
 
   props: {
     conditions: [],
+    hideByDefault: false,
     debug: false
   },
   mounted() {
     this.$parent.$parent.$el.style.display = "none";
     this.log("Initialize Conditional with ", this.conditions);
+    if (this.hideByDefault) {
+      this.conditions.forEach(con => {
+        con.conditions.forEach(c => {
+          c.hide.forEach(el => this.hide(el))
+        })
+      })
+    }
   },
   watch: {
     "$parent.$parent.$parent.values"(newVal, oldVal) {
